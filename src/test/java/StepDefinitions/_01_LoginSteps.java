@@ -5,10 +5,6 @@ import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.time.Duration;
 
 public class _01_LoginSteps {
 
@@ -22,15 +18,13 @@ public class _01_LoginSteps {
 
     @When("User enter username and password and click login button")
     public void userEnterUsernameAndPasswordAndClickLoginButton() {
-        WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
-        wait.until(ExpectedConditions.visibilityOf(dc.username));
-        dc.username.sendKeys("turkeyts");
-        dc.password.sendKeys("TechnoStudy123");
-        dc.loginButton.click();
+        dc.findAndSendKeys("username","turkeyts");
+        dc.findAndSendKeys("password","TechnoStudy123");
+        dc.findAndClick("loginButton");
     }
 
     @Then("User should login successfully")
     public void userShouldLoginSuccessfully() {
-
+        dc.findAndVerify("dasboard","Dashboard");
     }
 }

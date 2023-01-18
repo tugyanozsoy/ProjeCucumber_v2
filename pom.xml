@@ -22,24 +22,26 @@
             <version>4.4.0</version>
         </dependency>
 
-        <dependency> <!-- Cucumber -->
+        <!-- Cucumber için yüklendi. -->
+        <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-java</artifactId>
-            <version>7.11.0</version>
+            <version>7.5.0</version>
             <scope>test</scope>
         </dependency>
 
-        <dependency> <!-- TestNG -->
+        <!--TestNG için eklendi -->
+        <dependency>
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
-            <version>7.7.1</version>
+            <version>6.8.7</version>
             <scope>test</scope>
         </dependency>
 
-        <dependency> <!-- TestNG'i Cucumberda kullanmak için -->
+        <dependency>
             <groupId>io.cucumber</groupId>
             <artifactId>cucumber-testng</artifactId>
-            <version>7.11.0</version>
+            <version>7.5.0</version>
             <scope>test</scope>
         </dependency>
 
