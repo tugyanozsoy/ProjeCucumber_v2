@@ -5,7 +5,6 @@ import Utilities.GWD;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -17,7 +16,7 @@ public class _01_LoginSteps {
 
     @Given("Navigate to site")
     public void navigateToSite() {
-        GWD.getDriver().get("https://demo.mersys.io/");
+        GWD.getDriver().get("https://test.mersys.io/");
         GWD.getDriver().manage().window().maximize();
     }
 
@@ -25,8 +24,8 @@ public class _01_LoginSteps {
     public void userEnterUsernameAndPasswordAndClickLoginButton() {
         WebDriverWait wait = new WebDriverWait(GWD.getDriver(), Duration.ofSeconds(30));
         wait.until(ExpectedConditions.visibilityOf(dc.username));
-        dc.username.sendKeys("richfield.edu");
-        dc.password.sendKeys("Richfield2020!");
+        dc.username.sendKeys("turkeyts");
+        dc.password.sendKeys("TechnoStudy123");
         dc.loginButton.click();
     }
 
